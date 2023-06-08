@@ -1,72 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
 }
 
-h2{
-    width: 100%;
-    height: 150px;
-    background-color: bisque;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
-    color: rgb(197, 128, 197);
-    text-decoration: dashed underline gray;
-    text-align: center;
-    padding: 15px 0;
+h2 {
+  width: 100%;
+  height: 150px;
+  background-color: bisque;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: rgb(197, 128, 197);
+  text-decoration: dashed underline gray;
+  text-align: center;
+  position: absolute;
+  padding: 15px 0;
+  top: 0;
+  z-index: 1;
 }
 
-.container{
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-.profile{
-   margin-left: -15px;
-   position: relative;
-   margin-top: 25px;
+.profile {
+  margin-left: -15px;
+  position: relative;
+  margin-top: 25px;
 }
 
-.profile-img{
-    border: 15px solid #f2f2f2ff;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rbga(0, 0, 0, 0.1);
-    height: 200px;
-    transition: transform 0.3s;
-    width: 200px;
+.profile-img {
+  border: 15px solid #f2f2f2ff;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rbga(0, 0, 0, 0.1);
+  height: 200px;
+  transition: transform 0.3s;
+  width: 200px;
 }
 
-.profile:hover{
-    cursor: pointer;
+.profile:hover {
+  cursor: pointer;
 }
 
-.profile:hover .profile-img{
-    transform: translateY(20px);
+.profile:hover .profile-img {
+  transform: translateY(20px);
 }
 
-.profile::after{
-    background: #babafe;
-    border-radius: 12px;
-    content: attr(name);
-    text-transform: uppercase;
-    display: block;
-    opacity: 0;
-    padding: 8px 10px;
-    text-align: center;
-    transition: all 0.3s;
+.profile::after {
+  background: #babafe;
+  border-radius: 12px;
+  content: attr(name);
+  text-transform: uppercase;
+  display: block;
+  opacity: 0;
+  padding: 8px 10px;
+  text-align: center;
+  transition: all 0.3s;
 }
 
-.profile:hover::after{
-    opacity: 1;
-    display: block;
-    transform: translateY(-215px);
+.profile:hover::after {
+  opacity: 1;
+  display: block;
+  transform: translateY(-215px);
 }
